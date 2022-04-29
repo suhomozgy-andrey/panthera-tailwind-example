@@ -31,6 +31,8 @@ export const DefaultLayout = ({
     } = React.useContext<TAppContext>(AppContext);
 
     const onHamburgerClick = () => {
+        console.log('dfdf', subNavigationOpened);
+
         setSubNavigationOpened((prevResult) => !prevResult);
     };
 
@@ -48,7 +50,8 @@ export const DefaultLayout = ({
             </div>
             {contextualNavigation && (
                 <div
-                    className={classnames('tw-min-w-[240px] tw-bg-sky-lightest tw-flex tw-flex-col tw-gap-5', {
+                    className={classnames('tw-min-w-[240px] tw-bg-sky-lightest tw-flex-col tw-gap-5', {
+                        'tw-flex': subNavigationOpened,
                         'tw-hidden': !subNavigationOpened
                     })}
                 >
