@@ -1,7 +1,4 @@
 import classNames from 'classnames';
-
-import styles from './styles.module.scss';
-
 interface IDashboardWidgetProps {
     title: string;
     count?: number;
@@ -11,12 +8,7 @@ interface IDashboardWidgetProps {
 }
 
 export const DashboardWidget = ({ title, count, content, footerAction, noDataContent }: IDashboardWidgetProps) => (
-    <div
-        className={classNames(
-            styles.widget,
-            'tw-flex tw-flex-col tw-border tw-border-solid tw-border-utility-darkest tw-border-opacity-12 tw-rounded-sm'
-        )}
-    >
+    <div className='tw-h-[512px] tw-w-[360px] tw-flex tw-flex-col tw-border tw-border-solid tw-border-utility-darkest tw-border-opacity-12 tw-rounded-sm'>
         <div className='tw-px-4 tw-py-[14px] tw-border-solid tw-border-t-0 tw-border-x-0 tw-border-b tw-border-utility-darkest tw-border-opacity-4'>
             <span className='tw-mr-2'>{title}</span> {count && <span className='tw-text-ink-lighter'>{count}</span>}
         </div>

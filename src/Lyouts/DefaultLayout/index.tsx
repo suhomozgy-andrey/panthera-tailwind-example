@@ -31,8 +31,6 @@ export const DefaultLayout = ({
     } = React.useContext<TAppContext>(AppContext);
 
     const onHamburgerClick = () => {
-        console.log('dfdf', subNavigationOpened);
-
         setSubNavigationOpened((prevResult) => !prevResult);
     };
 
@@ -59,8 +57,8 @@ export const DefaultLayout = ({
                     <div className='tw-px-4 tw-flex-grow'>{navigation}</div>
                 </div>
             )}
-            <div className='tw-flex tw-overflow-auto'>
-                <div className='tw-flex tw-flex-col tw-min-w-[932px]'>
+            <div className='tw-flex tw-overflow-auto tw-flex-grow'>
+                <div className='tw-flex tw-flex-col tw-min-w-[932px] tw-flex-grow tw-h-full'>
                     {contentTitle ?? (
                         <div className='tw-px-4 tw-py-[22px] tw-flex tw-items-center'>
                             <Panthera24HamburgerIcon
@@ -71,7 +69,7 @@ export const DefaultLayout = ({
                         </div>
                     )}
 
-                    <div className='tw-overflow-auto tw-px-4 tw-pt-5 tw-pb-5'>{children}</div>
+                    <div className='tw-overflow-auto tw-px-4 tw-pt-5 tw-pb-5 tw-h-full'>{children}</div>
                 </div>
             </div>
         </div>

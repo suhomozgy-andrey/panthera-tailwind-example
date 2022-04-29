@@ -6,6 +6,9 @@ export const MainMenuUser = () => (
     <div className='tw-flex tw-flex-none tw-flex-col tw-items-center tw-mt-[16px] tw-px-[16px]'>
         <Panthera24SearchIcon />
         <Panthera24NotificationsIcon className='tw-mt-[12px]' />
-        <Avatar className='tw-mt-[14px]' />
+        <Avatar
+            className='tw-mt-[14px]'
+            src='https://testlio.s3-accelerate.amazonaws.com/user/53609/medium-1627029501.jpg'
+        />
     </div>
 );

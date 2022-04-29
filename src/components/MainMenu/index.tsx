@@ -5,6 +5,7 @@ import Panthera32IssuesIcon from '@suhomozgy-andrey/panthera-tailwind/es/Icons/3
 import Panthera32ReportsIcon from '@suhomozgy-andrey/panthera-tailwind/es/Icons/32/Panthera32Reports';
 import Panthera32TeamIcon from '@suhomozgy-andrey/panthera-tailwind/es/Icons/32/Panthera32Team';
 import Panthera32SettingsIcon from '@suhomozgy-andrey/panthera-tailwind/es/Icons/32/Panthera32Settings';
+import Panthera32SubmitIcon from '@suhomozgy-andrey/panthera-tailwind/es/Icons/32/Panthera32Submit';
 import { Link, LinkProps, useMatch, useResolvedPath } from 'react-router-dom';
 import classNames from 'classnames';
 
@@ -44,6 +45,9 @@ export const MainMenu = () => (
         </CustomLink>
         <CustomLink to='/issues' icon={<Panthera32IssuesIcon className='tw-mb-1 tw-text-center' />}>
             Issues
+        </CustomLink>
+        <CustomLink to='/tasks' icon={<Panthera32SubmitIcon className='tw-mb-1 tw-text-center' />}>
+            Tasks
         </CustomLink>
         <CustomLink to='/teams' icon={<Panthera32TeamIcon className='tw-mb-1 tw-text-center' />}>
             Teams
