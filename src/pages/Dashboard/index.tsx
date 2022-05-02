@@ -2,7 +2,6 @@ import { Button } from '@suhomozgy-andrey/panthera-tailwind';
 import Panthera16ChevronRightIcon from '@suhomozgy-andrey/panthera-tailwind/es/Icons/16/Panthera16ChevronRight';
 import Panthera32TestsIcon from '@suhomozgy-andrey/panthera-tailwind/es/Icons/32/Panthera32Tests';
 import Panthera32PlansIcon from '@suhomozgy-andrey/panthera-tailwind/es/Icons/32/Panthera32Plans';
-import Panthera32IssuesIcon from '@suhomozgy-andrey/panthera-tailwind/es/Icons/32/Panthera32Issues';
 import Panthera32TeamIcon from '@suhomozgy-andrey/panthera-tailwind/es/Icons/32/Panthera32Team';
 
 import { DashboardWidget } from '../../components/DashboardWidget';
@@ -12,6 +11,7 @@ import { DefaultLayout } from '../../Lyouts/DefaultLayout';
 
 import { TasksWidget } from './TasksWidget';
 import { RunsWidget } from './RunsWidget';
+import { IssuesWidget } from './IssuesWidget';
 
 export const Dashboard = () => {
     return (
@@ -25,18 +25,7 @@ export const Dashboard = () => {
             <div className='tw-flex tw-flex-wrap tw-gap-4'>
                 <TasksWidget />
                 <RunsWidget />
-                <DashboardWidget
-                    title='Issues'
-                    count={127}
-                    noDataContent={
-                        <NoData title='Issues missing' icon={<Panthera32IssuesIcon className='tw-w-12 tw-h-12' />} />
-                    }
-                    footerAction={
-                        <Button variant='plain-subdued' postfixIcon={<Panthera16ChevronRightIcon />}>
-                            Manage issues
-                        </Button>
-                    }
-                />
+                <IssuesWidget />
                 <DashboardWidget
                     title='Plans'
                     count={34}
