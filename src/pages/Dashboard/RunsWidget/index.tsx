@@ -1,4 +1,5 @@
 import { Button } from '@suhomozgy-andrey/panthera-tailwind';
+// import Button from '@suhomozgy-andrey/panthera-tailwind/dist/components/Button/Button';
 import Panthera16ChevronRightIcon from '@suhomozgy-andrey/panthera-tailwind/es/Icons/16/Panthera16ChevronRight';
 import Panthera32RunsIcon from '@suhomozgy-andrey/panthera-tailwind/es/Icons/32/Panthera32Runs';
 
